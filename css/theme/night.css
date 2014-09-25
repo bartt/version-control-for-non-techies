@@ -151,3 +151,21 @@ body {
   display: inline-block;
   vertical-align: middle;
 }
+
+.reveal .left {
+  text-align: left;
+}
+
+.reveal .left ul {
+  font-size: 80%;
+}
+
+.reveal .left table + h4 {
+  padding-top: 1em;
+}
+
+.reveal .fa {
+  font-style: normal;
+  font-family: FontAwesome;
+  vertical-align: baseline;
+}

@@ -29,6 +29,8 @@
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
       if( window.location.search.match( /print-pdf/gi ) ) {
@@ -46,7 +48,6 @@
   </head>
 
   <body>
-
     <div class="reveal">
 
       <!-- Any section element inside of this container is displayed as a slide -->
@@ -55,7 +56,7 @@
           <h1>Version Control for Non Techies</h1>
           <h3>How To Use Version Control for Everyday Documents</h3>
           <p>
-            <small>By <a href="https://twitter.com/bartt">Bart Teeuwisse (@bartt)</a></small>
+            <small>By <a href="https://twitter.com/bartt">Bart Teeuwisse <i class="fa fa-twitter"></i> @bartt</a></small>
           </p>
         </section>
 
@@ -66,6 +67,7 @@
             <li class="fragment">Or Google Docs?</li>
             <li class="fragment">Or …</li>
             <li class="fragment">After all, they each have <em>some</em> support for versioning?</li>
+            <li class="fragment">What makes <i class="fa fa-git fragment highlight-green"></i> so special?</li>
           </ul>
 
           <aside class="notes">
@@ -80,8 +82,70 @@
           </a>
         </section>
 
-      </div>
+        <section id="transparency">
+          <section>
+            <h3>Version Control for Transparency &amp; Accountability</h3>
+            <div class="fragment">
+              <blockquote class="twitter-tweet" lang="en" align="center"><p>Lazy Saturday reading (10,000 words, 76
+                footnotes). How our Senate forecast works: <a href="http://t.co/YBeSyPa8b3">http://t.co/YBeSyPa8b3</a>
+                <a href="http://t.co/iHagDbwmc6">pic.twitter.com/iHagDbwmc6</a></p>&mdash;
+                FiveThirtyEight (@FiveThirtyEight) <a
+                    href="https://twitter.com/FiveThirtyEight/status/513392205029855233">September 20,
+                  2014</a>
+              </blockquote>
+            </div>
+          </section>
+          <section data-markdown class="left">
+            <script type="text/template">
+              ### Historical FiveThirtyEight Senate Forecasts
 
+              The data behind the story [How The FiveThirtyEight Senate Forecast Model Works](http://fivethirtyeight.com/features/how-the-fivethirtyeight-senate-forecast-model-works/)
+
+              Header | Definition
+              ---|---------
+              `state` | Election
+              `year` | Year of election
+              `candidate` | Last name
+              `forecast_prob` | Probability of winning election per FiveThirtyEight Election Day forecast
+              `result` | `Win` or `Loss`
+
+              #### For archived results, see:
+
+               * **2008** https://web.archive.org/web/20081106113055/http://www.fivethirtyeight.com/
+               * **2010** http://elections.nytimes.com/2010/forecasts/senate
+               * **2012** http://fivethirtyeight.blogs.nytimes.com/fivethirtyeights-2012-forecast/
+            </script>
+          </section>
+          <section>
+            <h2>FiveThirtyEight's data is available to all</h2>
+
+            <p>
+              You can inspect the <a href="https://github.com/fivethirtyeight/data/blob/master/forecast-methodology/historical-senate-predictions.csv" target="_blank">Historical Senate Predictions Data</a>
+              yourself.
+            </p>
+            <p class="fragment">And re-apply their methodology</p>
+            <p class="fragment">And make modifications</p>
+            <p class="fragment">
+              <span class="fragment highlight-green">In doing so FiveThirtyEight has made themselves accountable!</span>
+            </p>
+          </section>
+        </section>
+
+        <section id="collaboration">
+          <h2>Version Control to Solicit Collaboration</h2>
+          <p>Twitter's <a href="https://github.com/twitter/innovators-patent-agreement" target="_blank">Innovators Patent Agreement</a> has been adopted by many tech companies.</p>
+          <p class="fragment">Adoption required consensus.</p>
+          <p class="fragment">Consensus required participation.</p>
+          <p class="fragment">
+            <span class="fragment highlight-green">Version control allowed <em>anyone</em> to contribute.</span>
+          </p>
+        </section>
+
+        <section>
+          <h2>The End <i class="fa fa-flag-checkered"></i></h2>
+          <p><small><a href="https://twitter.com/bartt">Bart Teeuwisse <i class="fa fa-twitter"></i> @bartt</a></small></p>
+        </section>
+			</div>
     </div>
 
     <script src="lib/js/head.min.js"></script>
@@ -115,8 +179,15 @@
         ]
       });
 
-    </script>
-    <script>
+      window.setTimeout(function() {
+        for (var i = 0; i < frames.length; i++) {
+          var media = frames[i].document.getElementsByClassName('media');
+          if (media[0]) {
+            media[0].setAttribute('style', 'background-color: transparent')
+          }
+        }
+      }, 1000);
+
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -124,5 +195,6 @@
       ga('create', 'UA-168047-6', 'auto');
       ga('send', 'pageview');
     </script>
-  </body>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</body>
 </html>
