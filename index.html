@@ -58,6 +58,9 @@
           <p>
             <small>By <a href="https://twitter.com/bartt">Bart Teeuwisse <i class="fa fa-twitter"></i> @bartt</a></small>
           </p>
+          <aside class="notes">
+            A presentation for <a href="http://techraising.com/">TechRaising</a> held on Sep 30<sup>th</sup>, 2014 at <a href="http://nextspace.com">NextSpace</a> in Santa Cruz.
+          </aside>
         </section>
 
         <section id="what-is">
@@ -83,6 +86,9 @@
             <p class="fragment">
               Many file copies<span class="fragment"> & <span class="fragment highlight-red">error prone</span></span>
             </p>
+            <aside class="notes">
+              Saving different copies of the same file to disk is a tedious and error prone form of version control. It is easy to overwrite a prior version and it quickly becomes difficult to tell version apart. While systems such RCS help, they don't provide support for collaboration.
+            </aside>
           </section>
 
           <section id="history-central">
@@ -97,6 +103,9 @@
             <p class="fragment">
               Central server<span class="fragment"> = <span class="fragment highlight-red">single point of failure</span></span>
             </p>
+            <aside class="notes">
+              Central version control such as CVS, SubVersion & Perforce add collaboration but still have a single point of failure. Back in the early 2000s, Yahoo for example lost thousands of man hours of productivity whenever their central version control system was down.
+            </aside>
           </section>
 
           <section id="history-distributed">
@@ -114,6 +123,9 @@
               </span>
             </p>
             <span class="fragment">Full mirrors</span><span class="fragment"> = <span class="fragment highlight-green">redundancy & offline access</span></span>
+            <aside class="notes">
+              Distributed version control systems such as git and mercurial are the next evolution. Git dominates the landscape and has been widely adopted. As a result git has the best tooling support.
+            </aside>
           </section>
         </section>
 
@@ -208,6 +220,9 @@
               <li><i class="fa fa-linux"></i> <a href="http://git-scm.com/downloads" title="Git command line client">Git command line client</a></li>
               <li class="fragment" style="list-style: none"><sup>*</sup> Requires a <i class="fa fa-github"></i> GitHub account. Recommended.</li>
             </ul>
+            <aside class="notes">
+              GitHub is not the only (free) git repository hosting provider. [BitBucket](https://bitbucket.org/) is another. Their pricing structure is different, pick one that suits your budget and taste.
+            </aside>
           </section>
 
           <section id="git-setup">
@@ -227,6 +242,9 @@
               <li class="fragment">Make changes</li>
               <li class="fragment">Repeat from #2</li>
             </ol>
+            <aside class="notes">
+              This is the basic pattern. Collaboration with others will add additional patterns. See [GitHub Guides](https://guides.github.com/) for great introductions.
+            </aside>
           </section>
 
           <section id="git-collaboration">
@@ -238,6 +256,9 @@
               <li class="fragment">Joe accepts Jane's pull request and merges Jane's changes</li>
               <li class="fragment">Jane's changes are now available to all Joe's contributors</li>
             </ol>
+            <aside class="notes">
+              Git doesn't impose how collaboration should be organized. There are many different styles possible. Atlassian (the makers of BitBucket) wrote a great [git workflow comparison](https://www.atlassian.com/git/tutorials/comparing-workflows/#!workflow-gitflow).
+            </aside>
           </section>
         </section>
 
@@ -250,6 +271,16 @@
         <section id="finish">
           <h2>The End <i class="fa fa-flag-checkered"></i></h2>
           <p><small><a href="https://twitter.com/bartt">Bart Teeuwisse <i class="fa fa-twitter"></i> @bartt</a></small></p>
+        </section>
+
+        <section id="colophon">
+          <h3>Colophon</h3>
+          <p>This presentation was made with <a href="http://lab.hakim.se/reveal-js/">Reveal.js</a>. Its source is available at <a href="https://github.com/bartt/version-control-for-non-techies"><i class="fa fa-github"></i> github.com/bartt/version-control-for-non-techies</a></p>
+          <p>Press the <code>ESC</code> key to get a bird's eye view of the presentation.</p>
+          <p>Press the <code>s</code> key to see the speaker notes.</p>
+          <aside class="notes">
+            You can control the presentation from the speaker note view. Notes (like this one) show up below the slide they accompany.
+          </aside>
         </section>
 			</div>
     </div>
