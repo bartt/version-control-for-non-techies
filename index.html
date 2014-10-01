@@ -60,42 +60,80 @@
           </p>
         </section>
 
-        <section id="why">
-          <h2>Why Version Control?</h2>
-          <ul>
-            <li class="fragment">Why not use Microsoft Word?</li>
-            <li class="fragment">Or Google Docs?</li>
-            <li class="fragment">Or …</li>
-            <li class="fragment">After all, they each have <em>some</em> support for versioning?</li>
-            <li class="fragment">What makes <i class="fa fa-git fragment highlight-green"></i> so special?</li>
-          </ul>
-
+        <section id="what-is">
+          <h2>What is Version Control?</h2>
+          <p class="fragment">
+            Version control is <span class="fragment highlight-green">a system that records changes to a file or set of files over time</span> so that you can recall specific versions later.
+          </p>
+          <p class="fa-3x fragment">
+            <i class="fa fa-git fragment highlight-green"></i>
+          </p>
           <aside class="notes">
           </aside>
         </section>
 
-        <section id="attend">
-          <h2>Attend 6:30PM on Tuesday, Sep 30<sup>th</sup> 2014</h2>
-          <p>At <a href="http://maps.google.com/maps?f=q&hl=en&q=101+Cooper+St%2C+Santa+Cruz%2C+CA%2C+95060%2C+us">NextSpace</a> in downtown Santa Cruz to find out more.</p>
-          <a class="rsvp" href="http://www.meetup.com/Santa-Cruz-TechRaising/events/202464692/" title="RSVP on Meetup.com">
-            RSVP on <img class="u-center no-border" src="http://img2.meetupstatic.com/img/8308650022681532654/header/logo-2x.png" alt="Meetup logo"/>
-          </a>
+        <section>
+          <section id="history-local">
+            <h2>A little history</h2>
+            <p class="fragment">Local version control</p>
+            <p class="fa-3x">
+              <span class="fragment"><i class="fragment fa fa-file-text highlight-current-blue"></i></span> <span class="fragment"><i class="fragment fa fa-file-text highlight-current-blue"></i></span> <i class="fragment fa fa-file-text"></i>
+            </p>
+            <p class="fragment fa-3x"><i class="fa fa-question"></i></p>
+            <p class="fragment">
+              Many file copies<span class="fragment"> & <span class="fragment highlight-red">error prone</span></span>
+            </p>
+          </section>
+
+          <section id="history-central">
+            <h2>A little history</h2>
+            <p>Central version control</p>
+            <p class="fa-3x">
+              <i class="fa fa-desktop fragment"></i> <span class="fragment"><i class="fa fa-arrows-h"></i> <i class="fa fa-database"></i></span><span class="fragment"> <i class="fa fa-arrows-h"></i> <i class="fa fa-desktop"></i></span>
+            </p>
+            <p class="fragment">
+              Adds collaboration
+            </p>
+            <p class="fragment">
+              Central server<span class="fragment"> = <span class="fragment highlight-red">single point of failure</span></span>
+            </p>
+          </section>
+
+          <section id="history-distributed">
+            <h2>A little history</h2>
+            <p>Distributed version control</p>
+            <p class="fa-3x">
+              <span class="fragment">
+                <i class="fa fa-laptop"></i> +
+                <i class="fa fa-database"></i>
+              </span>
+              <span class="fragment">
+                <i class="fa fa-arrows-h"></i>
+                <i class="fa fa-laptop"></i> +
+                <i class="fa fa-database"></i>
+              </span>
+            </p>
+            <span class="fragment">Full mirrors</span><span class="fragment"> = <span class="fragment highlight-green">redundancy & offline access</span></span>
+          </section>
         </section>
 
-        <section id="transparency">
-          <section>
-            <h3>Version Control for Transparency &amp; Accountability</h3>
+        <section>
+          <section id="transparency">
+            <h3>Provide Transparency &amp; Accountability</h3>
+
             <div class="fragment">
-              <blockquote class="twitter-tweet" lang="en" align="center"><p>Lazy Saturday reading (10,000 words, 76
+              <blockquote class="twitter-tweet" lang="en" align="center"><p>Lazy Saturday reading
+                (10,000 words, 76
                 footnotes). How our Senate forecast works: <a href="http://t.co/YBeSyPa8b3">http://t.co/YBeSyPa8b3</a>
                 <a href="http://t.co/iHagDbwmc6">pic.twitter.com/iHagDbwmc6</a></p>&mdash;
                 FiveThirtyEight (@FiveThirtyEight) <a
-                    href="https://twitter.com/FiveThirtyEight/status/513392205029855233">September 20,
+                    href="https://twitter.com/FiveThirtyEight/status/513392205029855233">September
+                  20,
                   2014</a>
               </blockquote>
             </div>
           </section>
-          <section data-markdown class="left">
+          <section data-markdown class="left" id="senate-forecasts">
             <script type="text/template">
               ### Historical FiveThirtyEight Senate Forecasts
 
@@ -111,16 +149,20 @@
 
               #### For archived results, see:
 
-               * **2008** https://web.archive.org/web/20081106113055/http://www.fivethirtyeight.com/
-               * **2010** http://elections.nytimes.com/2010/forecasts/senate
-               * **2012** http://fivethirtyeight.blogs.nytimes.com/fivethirtyeights-2012-forecast/
+              * **2008** https://web.archive.org/web/20081106113055/http://www.fivethirtyeight.com/
+              * **2010** http://elections.nytimes.com/2010/forecasts/senate
+              * **2012** http://fivethirtyeight.blogs.nytimes.com/fivethirtyeights-2012-forecast/
             </script>
           </section>
-          <section>
+          <section id="fivethirtyeight-data">
             <h2>FiveThirtyEight's data is available to all</h2>
-
             <p>
-              You can inspect the <a href="https://github.com/fivethirtyeight/data/blob/master/forecast-methodology/historical-senate-predictions.csv" target="_blank">Historical Senate Predictions Data</a>
+              You can inspect the <a
+                href="https://github.com/fivethirtyeight/data/blob/master/forecast-methodology/historical-senate-predictions.csv"
+                target="_blank"
+                title="FiveThirtyEight Historical Senate Predictions Data on GitHub">
+              <i class="fa fa-github"></i> Historical Senate Predictions Data
+            </a>
               yourself.
             </p>
             <p class="fragment">And re-apply their methodology</p>
@@ -129,19 +171,83 @@
               <span class="fragment highlight-green">In doing so FiveThirtyEight has made themselves accountable!</span>
             </p>
           </section>
-        </section>
-
-        <section id="collaboration">
-          <h2>Version Control to Solicit Collaboration</h2>
-          <p>Twitter's <a href="https://github.com/twitter/innovators-patent-agreement" target="_blank">Innovators Patent Agreement</a> has been adopted by many tech companies.</p>
-          <p class="fragment">Adoption required consensus.</p>
-          <p class="fragment">Consensus required participation.</p>
-          <p class="fragment">
-            <span class="fragment highlight-green">Version control allowed <em>anyone</em> to contribute.</span>
-          </p>
+          <section id="gitlaw">
+            <h2>GitLaw</h2>
+            <ul>
+              <li class="fragment"><a href="http://www.opencongress.org/bill/sjres19-113/text">S.J.Res.19</a><span class="fragment">, a US bill example from OpenCongress.org</span></li>
+              <li class="fragment"><a href="http://www.lafabriquedelaloi.fr/">TheLawFactory.fr</a><span class="fragment">, French counterpart based on <i class="fa fa-git"></i></span> </li>
+            </ul>
+          </section>
         </section>
 
         <section>
+          <section id="collaboration-ipa">
+            <h2>Solicit Collaboration</h2>
+            <p>Twitter's <a href="https://github.com/twitter/innovators-patent-agreement" target="_blank">Innovators Patent Agreement</a> has been adopted by many tech companies.</p>
+            <p class="fragment">Adoption required consensus.</p>
+            <p class="fragment">Consensus required participation.</p>
+            <p class="fragment">
+              <span class="fragment highlight-green">Version control allowed <em>anyone</em> to contribute.</span>
+            </p>
+          </section>
+          <section id="collaboration-examples">
+            <h2>More Collaboration</h2>
+            <ul>
+              <li class="fragment"><a href="https://github.com/seriesseed/equity">Series Seed Preferred Stock</a>, another legal document</li>
+              <li class="fragment"><a href="https://github.com/jcoveney/resources">A collection of useful papers, books, and links for the refined programmer</a></li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section id="git-tools">
+            <h2><i class="fa fa-git"></i> Tools</h2>
+            <ul class="fragment">
+              <li><i class="fa fa-apple"></i> <a href="https://mac.github.com/" title="GitHub for Mac"><i class="fa fa-github"></i> GitHub for Mac</a><sup>*</sup></li>
+              <li><i class="fa fa-windows"></i> <a href="https://windows.github.com/" title="GitHub for Windows"><i class="fa fa-github"></i> GitHub for Windows</a><sup>*</sup></li>
+              <li><i class="fa fa-linux"></i> <a href="http://git-scm.com/downloads" title="Git command line client">Git command line client</a></li>
+              <li class="fragment" style="list-style: none"><sup>*</sup> Requires a <i class="fa fa-github"></i> GitHub account. Recommended.</li>
+            </ul>
+          </section>
+
+          <section id="git-setup">
+            <h2><i class="fa fa-git"></i> Setup</h2>
+            <ol>
+              <li class="fragment">Install <i class="fa fa-git"></i> software</li>
+              <li class="fragment">Open <i class="fa fa-github"></i> account</li>
+              <li class="fragment">Setup <i class="fa fa-git"></i> defaults</li>
+            </ol>
+          </section>
+
+          <section id="git-basic-workflow">
+            <h2><i class="fa fa-git"></i> Work Flow</h2>
+            <ol>
+              <li class="fragment">Put under version control<span class="fragment">, aka. create a <span class="fragment highlight-green">repo</span>sitory</span> </li>
+              <li class="fragment">Record a version</li>
+              <li class="fragment">Make changes</li>
+              <li class="fragment">Repeat from #2</li>
+            </ol>
+          </section>
+
+          <section id="git-collaboration">
+            <h2><i class="fa fa-git"></i> Collaboration</h2>
+            <ol>
+              <li class="fragment">Jane clones/forks Joe's repo</li>
+              <li class="fragment">Jane changes in <em>her</em> copy</li>
+              <li class="fragment">Jane asks Joe to pull &amp; merge her changes</li>
+              <li class="fragment">Joe accepts Jane's pull request and merges Jane's changes</li>
+              <li class="fragment">Jane's changes are now available to all Joe's contributors</li>
+            </ol>
+          </section>
+        </section>
+
+        <section data-markdown="markdown.md"
+                 data-vertical="^\n\n"
+                 data-note="^Note:">
+
+        </section>
+
+        <section id="finish">
           <h2>The End <i class="fa fa-flag-checkered"></i></h2>
           <p><small><a href="https://twitter.com/bartt">Bart Teeuwisse <i class="fa fa-twitter"></i> @bartt</a></small></p>
         </section>

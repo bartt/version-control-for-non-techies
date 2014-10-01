@@ -169,3 +169,23 @@ body {
   font-family: FontAwesome;
   vertical-align: baseline;
 }
+
+.reveal .fa-lg {
+  font-size: 133%;
+}
+
+.reveal .fa-2x {
+  font-size: 2em;
+}
+
+.reveal .fa-3x {
+  font-size: 3em;
+}
+
+.reveal .fa-4x {
+  font-size: 4em;
+}
+
+.reveal .fa-4x {
+  font-size: 5em;
+}
